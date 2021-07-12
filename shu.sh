@@ -3,3 +3,4 @@
 
 # sh adgv.sh ntf de all
 # sh shu.sh 6 de 3 de de wp ntf all 3
+# sh shu.sh 6 mt 3 en us wp ntf all 3
