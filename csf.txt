@@ -89,3 +89,6 @@ Advanced Configuration File
 #cd /etc/csf
 #vim csf.conf
 
+Note: https://www.hostdime.com/kb/hd/command-line/useful-csf-ssh-command-line-commands-csf-cheat-sheet
+
+
