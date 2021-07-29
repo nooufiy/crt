@@ -1,0 +1,91 @@
+Steps to Install CSF Firewall on Centos 7
+
+Step 1: Downloading CSF Firewall Dependencies
+yum install wget vim perl-libwww-perl.noarch perl-Time-HiRes
+
+Step 2: Install CSF
+Go to /usr/src
+
+#cd /usr/src
+
+Download CSF Firewall
+#wget https://download.configserver.com/csf...
+#tar -xzf csf.tgz
+#cd csf
+#sh install .sh
+
+Step 3: Checking CSF Working on server or not
+#cd /usr/local/csf/bin/
+#perl csftest.pl
+
+If you see the test results as shown below, 
+then CSF is running without problems on your server:
+
+RESULT: csf should function on this server
+
+Step 4: Configuring CSF Firewall on Centos 7
+
+1. Stop Firewalld
+#systemctl stop firewalld
+
+2. Disable/Remove firewalld from the startup:
+
+#systemctl disable firewalld
+
+3. Then go to the CSF Configuration directory
+"/etc/csf/" and edit the file "csf.conf" 
+with the vim editor:
+
+#cd /etc/csf/
+#vim csf.conf
+
+4. Change line 11 "TESTING " to "0" for applying the 
+firewall configuration.
+
+TESTING = "0"
+
+5. By default CSF allows incoming and outgoing 
+traffic for the SSH standard port 22, 
+if you use a different SSH port then 
+please add your port to the configuration 
+in line 139 "TCP_IN".
+
+6. Now start CSF and LFD with systemctl command:
+
+#systemctl start csf
+#systemctl start lfd
+
+7. Enable CSF and LFD
+
+#systemctl enable csf
+#systemctl enable lfd
+
+8. You can see the list default rules of CSF 
+with command:
+
+#csf -l
+
+Step 5 Basic CSF Commands
+
+Start the Firewall
+
+#csf -s
+
+Flush/stop firewall rules
+#csf -f
+
+Reload the Firewall Rules
+
+#csf -f
+
+Allow an IP and add it to csf.allow
+#csf -a ipaddress
+
+Remove an Ip
+#csf -ar ipaddress
+
+Advanced Configuration File
+
+#cd /etc/csf
+#vim csf.conf
+
