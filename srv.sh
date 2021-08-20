@@ -43,3 +43,17 @@ Screen
 rename:
 screen -S 8890.foo -X sessionname bar
 
+Sed
+======================
+sed -n '2p' < file.txt
+will print 2nd line
+
+sed -n '2011p' < file.txt
+2011th line
+
+sed -n '10,33p' < file.txt
+line 10 up to line 33
+
+sed -n '1p;3p' < file.txt
+1st and 3th line
+
