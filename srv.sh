@@ -38,10 +38,13 @@ ls -laZ
 chcon -R -t httpd_sys_rw_content_t coba.dv
 
 
+
 Screen
 ======================
 rename:
 screen -S 8890.foo -X sessionname bar
+
+
 
 Sed
 ======================
