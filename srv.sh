@@ -36,7 +36,8 @@ rsync -avzh --progress root@155.138.159.94:/home/shu3 /home
 =================================================
 ls -laZ
 chcon -R -t httpd_sys_rw_content_t coba.dv
-
+chcon -h system_u:object_r:httpd_sys_content_t /home/w
+chcon -R system_u:object_r:httpd_sys_content_t /home/w
 
 
 Screen
