@@ -61,3 +61,8 @@ line 10 up to line 33
 sed -n '1p;3p' < file.txt
 1st and 3th line
 
+
+Editor (auto)
+======================
+export EDITOR=nano
+
