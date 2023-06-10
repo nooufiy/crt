@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # tar gz
 ======================
 # create
@@ -9,7 +8,6 @@ tar --exclude='dt' --exclude='extr' -czvf html.tar.gz html
 
 # extract
 tar -zxvf home.tar.gz
-
 
 
 # p7zip
@@ -21,6 +19,11 @@ yum -y install p7zip
 7za x -pPaswd file.7z
 
 
+#keygen
+======================
+ssh-keygen
+ssh-copy-id root@138.68.8.xxx
+
 
 # rsync
 ======================
@@ -29,7 +32,6 @@ rsync -avz --progress dt root@95.179.155.134:/home
 
 # Mengirim ke dalam |
 rsync -avzh --progress root@155.138.159.94:/home/shu3 /home
-
 
 
 # SEMANGE / SELINUX pakai [rw] means read & write
@@ -44,7 +46,6 @@ Screen
 ======================
 rename:
 screen -S 8890.foo -X sessionname bar
-
 
 
 Sed
