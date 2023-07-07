@@ -40,7 +40,9 @@ ls -laZ
 chcon -R -t httpd_sys_rw_content_t coba.dv
 chcon -h system_u:object_r:httpd_sys_content_t /home/w
 chcon -R system_u:object_r:httpd_sys_content_t /home/w
-
+# semanage boolean --modify --on httpd_can_network_connect
+# /usr/sbin/setsebool -P httpd_can_network_connect 1
+setsebool -P httpd_can_network_connect 1
 
 Screen
 ======================
