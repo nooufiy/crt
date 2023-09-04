@@ -45,6 +45,10 @@ chcon -R -u system_u -r object_r -t httpd_sys_rw_content_t "$dpub"/{w,l}
 # /usr/sbin/setsebool -P httpd_can_network_connect 1
 setsebool -P httpd_can_network_connect 1
 
+vbox
+======
+sudo dhclient
+
 Screen
 ======================
 rename:
