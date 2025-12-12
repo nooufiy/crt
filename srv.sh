@@ -74,3 +74,7 @@ Editor (auto)
 ======================
 export EDITOR=nano
 
+Kill all node git bash
+======================
+taskkill //F //IM node.exe
+
