@@ -78,3 +78,14 @@ Kill all node git bash
 ======================
 taskkill //F //IM node.exe
 
+
+Kirim file ke server
+======================
+rsync -avz -e "ssh -i ~/.ssh/do_mail_server" /d/laragon/www/ext/shopee-product-exporter/serverMail root@188.166.247.93:/root/
+rsync -avz -e "ssh -i ~/.ssh/do_mail_server" /d/laragon/www/ext/shopee-product-exporter/serverMail root@188.166.247.93:/root/
+rsync -avz -e "ssh -i /c/Users/User/.ssh/do_mail_server" /d/laragon/www/ext/shopee-product-exporter/serverMail root@188.166.247.93:/root/
+
+# Kirim script dan credential
+scp -i ~/.ssh/do_mail_server /d/laragon/www/github/clone-repo.sh root@188.166.247.93:/root/
+scp -i ~/.ssh/do_mail_server /d/laragon/www/github/cred.txt root@188.166.247.93:/root/
+
