@@ -337,6 +337,14 @@ EXPLAIN ANALYZE SELECT * FROM users;
 
 ------------------------------------------------------------------------
 
+## 19. Edit/Reset Pass
+
+``` sql
+sudo -u postgres psql -c "ALTER USER minshopx WITH PASSWORD 'O4xGP6ODWTZcgyYZqTOoL+dbKii3YcNN';"
+```
+
+------------------------------------------------------------------------
+
 ## Selesai
 
 Dokumen ini dapat digunakan sebagai referensi cepat command PostgreSQL.
